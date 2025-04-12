@@ -1,0 +1,98 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+}
+
+/* Container for the wheel */
+.wheel-container {
+    width: 300px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Wheel style (center container for rings) */
+.wheel {
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border-radius: 50%;
+    transition: transform 1s ease-in-out;
+}
+
+/* Ring style */
+.ring {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 10px solid transparent;
+}
+
+/* Define different ring colors */
+.ring-1 {
+    border-top-color: red;
+    border-right-color: orange;
+    border-bottom-color: yellow;
+    border-left-color: green;
+}
+
+.ring-2 {
+    width: 80%;
+    height: 80%;
+    border-width: 8px;
+    border-top-color: blue;
+    border-right-color: indigo;
+    border-bottom-color: violet;
+    border-left-color: red;
+}
+
+.ring-3 {
+    width: 60%;
+    height: 60%;
+    border-width: 6px;
+    border-top-color: violet;
+    border-right-color: blue;
+    border-bottom-color: green;
+    border-left-color: orange;
+}
+
+.ring-4 {
+    width: 40%;
+    height: 40%;
+    border-width: 4px;
+    border-top-color: yellow;
+    border-right-color: green;
+    border-bottom-color: orange;
+    border-left-color: indigo;
+}
+
+.ring-5 {
+    width: 20%;
+    height: 20%;
+    border-width: 2px;
+    border-top-color: red;
+    border-right-color: yellow;
+    border-bottom-color: violet;
+    border-left-color: blue;
+}
+
+/* Rotating effect on hover */
+.wheel-container:hover .wheel {
+    transform: rotate(360deg);
+}
